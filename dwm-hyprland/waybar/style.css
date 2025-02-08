@@ -1,0 +1,168 @@
+/*Define the colors (Thanks mxkrsv)*/
+
+@define-color black	#282828;
+@define-color red	#cc241d;
+@define-color green	#98971a;
+@define-color yellow	#d79921;
+@define-color blue	#458588;
+@define-color purple	#b16286;
+@define-color aqua	#689d6a;
+@define-color gray	#a89984;
+@define-color brgray	#928374;
+@define-color brred	#fb4934;
+@define-color brgreen	#b8bb26;
+@define-color bryellow	#fabd2f;
+@define-color brblue	#83a598;
+@define-color brpurple	#d3869b;
+@define-color braqua	#8ec07c;
+@define-color white	#ebdbb2;
+@define-color bg2	#504945;
+@define-color darkbg rgb(50,46,44);
+@define-color white-inactive rgba(235, 219, 178, 0.2);
+
+
+@define-color warning 	@bryellow;
+@define-color critical	@red;
+@define-color mode	@black;
+@define-color unfocused	@bg2;
+@define-color focused	@braqua;
+@define-color inactive	@purple;
+@define-color sound	@brpurple;
+@define-color network	@purple;
+@define-color memory	@braqua;
+@define-color cpu	@green;
+@define-color temp	@brgreen;
+@define-color layout	@bryellow;
+@define-color battery	@aqua;
+@define-color date	@black;
+@define-color time	@white;
+
+
+* {
+    border: 0;
+    border-radius: 0px;
+    font-family: "Jetbrains Mono,Courier Prime, Cascadia Mono, Fira Sans, Font Awesome, Ubuntu Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+
+window#waybar {
+    background: @bg2;
+    color: @white;
+}
+
+#custom-backup, #custom-wall-select, #custom-dots, #custom-hyprpaper-reload, #custom-update, #custom-play, #custom-stop, #custom-drawer {
+   color:  @green;
+   padding: 2px;
+   background-color: @black;
+}
+
+#custom-group-icon-2 {
+    color: @green;
+    padding-left: 4px;
+    background-color: @black; 
+}
+
+
+#window {
+    color: @white;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+
+
+#workspaces {
+  padding: 0px;
+}
+
+
+#workspaces button /*#custom-play, #custom-stop*/ {
+    background-color: @black;   
+    color: @white-inactive;
+    padding: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-top: 0px solid transparent;
+}
+
+#workspaces button.active {
+    color: @black;   
+    padding: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: @white;
+}
+
+
+#battery, #cpu, #memory, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding: 0 3px;
+    background-color: @black; 
+    font-weight: bold;
+}
+
+#clock {
+    font-weight: bolder;
+    background-color: @black;
+}
+
+#battery {
+   color:  	@red;
+   background-color: @black; 
+}
+
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#memory {
+  background-color: @black;   
+  color: @yellow;
+}
+
+
+
+#pulseaudio {
+  background-color: @black;   
+  color: @blue;
+}
+
+
+
+#tray {
+  background-color: @black; 
+}
+
+
+#custom-wofi, #custom-swaync, #custom-wall, #custom-reload, #custom-power {
+    padding: 2px;
+    background-color: @black; 
+    color: @green;
+}
+
+
+#custom-power {
+	color: @green;
+  background-color: @black;
+}
+

@@ -1,0 +1,277 @@
+{
+    "layer": "bottom", // Waybar at top layer
+    "position": "top", // Waybar at the top of your screen
+    "height":22, // Waybar height
+    "margin": 0,
+    // , 
+    // "width": 1366, // Waybar width HELLO
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "hyprland/submap",  "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "memory", "battery","tray", "clock", "custom/power", "group/sysext"],
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1:web": "",
+            "2:code": "",
+            "3:term": "",
+            "4:work": "",
+            "5:music": "",
+            "6:docs": "",
+            "urgent": "",
+//            "active": "",
+//           "default": ""
+        }
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "icon": "true"
+    },
+    "hyprland/submap": {
+        "format": "{}"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+	"format": "{:%A, %d %B %I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "[MEM {}%]"
+    },
+  "custom/icon-dwm": {
+    "exec": "~/.config/waybar/hypr-layouts.go",
+    "restart-interval": 1
+},
+
+   "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "[{capacity}% {icon}]",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "~/repos/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "[VOL: {volume}%]",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/waybar-media": {
+        "return-type": "json",
+        "exec": "waybar-media.py status",
+        "on-click": "waybar-media.py playpause",
+        "on-scroll-up": "waybar-media.py previous",
+        "on-scroll-down": "waybar-media.py next",
+        "escape": true
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "exec-if": "pgrep spotify"
+    },
+
+"custom/power": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": ".config/rofi/scripts/powermenu.sh",
+	"exec-if": "true"
+},
+
+"custom/mode": {
+  "format": "><>",
+  "exec": "echo ><>"
+},
+
+
+"custom/stop": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": ".config/hypr/scripts/stop-sounds.sh",
+	"exec-if": "true"
+},
+
+"custom/play": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": ".config/hypr/scripts/sounds.sh",
+	"exec-if": "true"
+},
+
+"custom/drawer": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": "nwg-drawer",
+	"exec-if": "true"
+},
+
+"custom/group-icon": {
+    "format":"",
+    "exec": "echo ",
+    "on-click": "echo hi",
+    "exec-if": "true"
+},
+
+"custom/group-icon-2": {
+    "format":"",
+    "exec": "echo ",
+    "on-click": "echo hi",
+    "exec-if": "true"
+},
+
+"custom/hyprpaper-reload": {
+  "format": "",
+  "exec": "echo ",
+  "on-click": "~/.config/hypr/scripts/hyprpaper-reload.sh",
+  "exec-if": "true"
+},
+
+"group/sysext": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 0,
+		"children-class": "custom/group-icon-2",
+		"transition-left-to-right": false
+        },
+	"modules": [
+        "custom/group-icon-2",
+        "custom/play",
+        "custom/stop",
+        "custom/swaync",
+        "custom/hyprpaper-reload",
+		"custom/wall",
+		"custom/reload",
+		"custom/wofi",
+        "custom/drawer",
+		"custom/update",
+		"custom/dots",
+		"custom/backup",
+		"custom/wall-select"
+    ]
+},
+
+"group/syscfg": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 754,
+		"children-class": "custom/group-icon",
+		"transition-left-to-right": false
+        },
+	"modules": [
+        "custom/group-icon",
+        "custom/drawer",
+		"custom/update",
+		"custom/dots",
+		"custom/backup",
+		"custom/wall-select"
+    ]
+},
+
+"custom/update": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": "/home/arkboi/.config/hypr/scripts/update.sh",
+	"exec-if": "true",
+    "class": "grouped"
+},
+
+"custom/dots": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": "~/.config/hypr/scripts/dots.sh",
+    "class": "grouped",
+	"exec-if": "true"
+},
+
+"custom/wall-select": {
+	"format": "",
+	"exec": "echo ",
+	"on-click": "waypaper",
+    "class": "grouped",
+	"exec-if": "true"
+},
+
+"custom/backup": {
+
+    "format": "󰉁",
+    "exec": "echo 󰉁",
+    "on-click": "~/.config/hypr/scripts/backup.sh",
+    "class": "grouped",
+    "exec-if": "true"
+},
+
+"custom/swaync": {
+	"format": "󰇮",
+        "exec": "echo 󰇮",
+        "on-click": "swaync-client -t",
+        "exec-if": "true"
+},
+
+
+"custom/cava": {
+    "format":"cava",
+    "exec":"cava"
+},
+
+"custom/reload": {
+    "format": "󰏗",
+    "exec": "echo 󰏗",
+    "on-click": "~/.config/hypr/scripts/waybar-reload.sh",
+    "exec-if": "true"
+},
+
+  "custom/wofi": {
+     "format": "",
+     "exec": "echo hello",
+     "on-click": "rofi -show drun",
+     "tooltip": "Click to open wofi",
+     "exec-if": "true"
+     
+},
+"custom/disk": {
+    "format": " {}",
+    "interval": "300",
+    "max-length": "20",
+    "exec": "df --total -hl | grep 'nvme0n1p8' | awk '{print $5}'"
+},
+
+"custom/wall": {
+    "format": "",  // You can change this icon to anything you prefer
+    "exec": "echo ", // This will just display the icon
+    "on-click": "~/.config/hypr/scripts/wall.sh", // Run the script when clicked
+    "tooltip": "Click to change wallpaper", // Tooltip for the icon
+    "exec-if": "true"
+}
+}
