@@ -1,5 +1,8 @@
+@import url('file:///home/arkboi/.cache/wal/colors-waybar.css');
+
 /*Define the colors (Thanks mxkrsv)*/
 
+/*
 @define-color black	#282828;
 @define-color red	#cc241d;
 @define-color green	#98971a;
@@ -36,7 +39,14 @@
 @define-color battery	@aqua;
 @define-color date	@black;
 @define-color time	@white;
+*/
 
+#custom-dwm {
+  background-color: @background;
+  color: @foreground;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
 * {
     border: 0;
@@ -50,25 +60,25 @@
 
 
 window#waybar {
-    background: @bg2;
-    color: @white;
+    background: @foreground;
+    color: @foreground;
 }
 
 #custom-backup, #custom-wall-select, #custom-dots, #custom-hyprpaper-reload, #custom-update, #custom-play, #custom-stop, #custom-drawer {
-   color:  @green;
+   color:  @color3;
    padding: 2px;
-   background-color: @black;
+   background-color: @background;
 }
 
 #custom-group-icon-2 {
-    color: @green;
+    color: @color3;
     padding-left: 4px;
-    background-color: @black; 
+    background-color: @background; 
 }
 
 
 #window {
-    color: @white;
+    color: @background;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -82,8 +92,8 @@ window#waybar {
 
 
 #workspaces button /*#custom-play, #custom-stop*/ {
-    background-color: @black;   
-    color: @white-inactive;
+    background-color: @background;   
+    color: @color4;
     padding: 0px;
     padding-left: 4px;
     padding-right: 4px;
@@ -91,28 +101,28 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @black;   
+    color: @background;   
     padding: 0px;
     padding-left: 4px;
     padding-right: 4px;
-    background-color: @white;
+    background-color: @foreground;
 }
 
 
 #battery, #cpu, #memory, #pulseaudio, #custom-spotify, #tray, #mode {
     padding: 0 3px;
-    background-color: @black; 
+    background-color: @background; 
     font-weight: bold;
 }
 
 #clock {
     font-weight: bolder;
-    background-color: @black;
+    background-color: @background;
 }
 
 #battery {
-   color:  	@red;
-   background-color: @black; 
+   color:  	@color9;
+   background-color: @background; 
 }
 
 
@@ -136,33 +146,33 @@ window#waybar {
 
 
 #memory {
-  background-color: @black;   
-  color: @yellow;
+  background-color: @background;   
+  color: @color2;
 }
 
 
 
 #pulseaudio {
-  background-color: @black;   
-  color: @blue;
+  background-color: @background;   
+  color: @color14;
 }
 
 
 
 #tray {
-  background-color: @black; 
+  background-color: @background; 
 }
 
 
 #custom-wofi, #custom-swaync, #custom-wall, #custom-reload, #custom-power {
     padding: 2px;
-    background-color: @black; 
-    color: @green;
+    background-color: @background; 
+    color: @color3;
 }
 
 
 #custom-power {
-	color: @green;
-  background-color: @black;
+	color: @color3;
+  background-color: @background;
 }
 

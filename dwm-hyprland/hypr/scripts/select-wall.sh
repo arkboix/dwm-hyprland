@@ -63,6 +63,9 @@ if [[ -n "$selected" ]]; then
     if [[ $? -eq 0 ]]; then
         hyprctl hyprpaper wallpaper "$MONITOR,$wallpaper_path"
         if [[ $? -eq 0 ]]; then
+            wal -i "$wallpaper_path"
+            pkill waybar
+            waybar &
             echo "Successfully set wallpaper: $selected"
             exit 0
         fi
