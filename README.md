@@ -20,7 +20,9 @@ Please carefully review and run the backup.sh script to backup all of the direct
 
 # Installation
 
+Either run the install script and reboot or manually install:
 Please delete the existing of these directories (backup recommended), then copy the files to their designated directories:
+
 -----------------------------
 | Dotfiles | Directories    |
 |----------|----------------|
