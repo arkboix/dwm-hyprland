@@ -3,6 +3,7 @@
 Finally! The easy way to get a DWM-like setup with Hyprland!
 
 Features Include :
+  - Colorscheme automatically changes based on wallpaper
   - No/Subtle animations for workspace switching/windows
   - Minimal DWM Inspired waybar
   - Dmenu inspired rofi theme included (dmenu-gruv.rasi) other themes are not mine, GreenMeho.rasi is also included as a custom theme
@@ -10,9 +11,10 @@ Features Include :
   - Gruvbox colorscheme
   - Waybar's colorscheme is STUPIDLY EASY to change, just tweak the variables at the top!
 
-Preview:
+Previews:
+![image](https://github.com/user-attachments/assets/5d2f468c-646d-42d0-b09b-0da6f322188a)
+![image](https://github.com/user-attachments/assets/02cfe9d7-65fa-4626-8254-8be205cf6a75)
 
-![image](https://github.com/user-attachments/assets/70ead4cb-7f7c-40d8-8553-5690c76f4368)
 
 # Backing up your files
 
