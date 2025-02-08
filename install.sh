@@ -3,10 +3,11 @@
 echo "MAKE SURE YOU ARE IN THE GITHUB REPOSITORY'S FOLDER"
 chmod +x backup.sh
 ./backup.sh
-sudo pacman -S gum
+sudo pacman -S --noconfirm gum go rofi-wayland swaync waybar kitty python-pywal zsh
 if gum choose "Start Installation" "No" | grep -q "Start Installation"; then
   echo "Starting installation..."
   # Place your installation code here
+  chsh -s zsh
   rm -rf $HOME/.config/hypr/*
   cp -r dwm-hyprland/hypr/* $HOME/.config/hypr/
   rm -rf $HOME/.config/waybar/*
@@ -17,6 +18,8 @@ if gum choose "Start Installation" "No" | grep -q "Start Installation"; then
   cp -r dwm-hyprland/swaync/* $HOME/.config/swaync
   rm -rf $HOME/.config/kitty/*
   cp -r dwm-hyprland/kitty/* $HOME/.config/kitty/
+  chmod +x $HOME/.config/hypr/scripts/*.sh
+  chmod +x $HOME/.config/waybar/*.sh
   echo COMPLETE!, REBOOT YOUR SYSTEM TO APPLY CHANGES CORRECTLY!
 else
   echo "Installation aborted."
