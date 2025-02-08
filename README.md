@@ -14,6 +14,9 @@ Preview:
 
 ![image](https://github.com/user-attachments/assets/70ead4cb-7f7c-40d8-8553-5690c76f4368)
 
+# Backing up your files
+
+Please carefully review and run the backup.sh script to backup all of the directories that are getting replaced.
 
 # Installation
 
