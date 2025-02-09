@@ -9,8 +9,8 @@ Features Include :
   - Minimal DWM Inspired waybar
   - Dmenu inspired rofi theme included (dmenu-gruv.rasi) other themes are not mine, GreenMeho.rasi is also included as a custom theme
   - Swaync gruvbox theme (not mine)
-  - Gruvbox colorscheme
-  - Waybar's colorscheme is STUPIDLY EASY to change, just tweak the variables at the top!
+  - Pywal wallpaper based colorscheme
+  - Waybar's colorscheme is STUPIDLY EASY to change
 
 Previews:
 ![image](https://github.com/user-attachments/assets/5d2f468c-646d-42d0-b09b-0da6f322188a)
