@@ -3,6 +3,7 @@
 Finally! The easy way to get a DWM-like setup with Hyprland!
 
 Features Include :
+  - Playing media detector in waybar
   - Colorscheme automatically changes based on wallpaper
   - No/Subtle animations for workspace switching/windows
   - Minimal DWM Inspired waybar
