@@ -99,14 +99,14 @@
         "format": " {}",
         "max-length": 40,
         "interval": 30, // Remove this if your script is endless and write in loop
-        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "exec": "~/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep spotify"
     },
 
 "custom/power": {
 	"format": "",
 	"exec": "echo ",
-	"on-click": ".config/rofi/scripts/powermenu.sh",
+	"on-click": "~/.config/rofi/scripts/powermenu.sh",
 	"exec-if": "true"
 },
 
@@ -118,7 +118,7 @@
 "custom/colors": {
   "format": "",
   "exec": "echo ",
-  "on-click": ".config/hypr/scripts/color.sh",
+  "on-click": "~/.config/hypr/scripts/color.sh",
   "exec-if": "true"
 },
 
@@ -130,14 +130,14 @@
 "custom/stop": {
 	"format": "",
 	"exec": "echo ",
-	"on-click": ".config/hypr/scripts/stop-sounds.sh",
+	"on-click": "~/.config/hypr/scripts/stop-sounds.sh",
 	"exec-if": "true"
 },
 
 "custom/play": {
 	"format": "",
 	"exec": "echo ",
-	"on-click": ".config/hypr/scripts/sounds.sh",
+	"on-click": "~/.config/hypr/scripts/sounds.sh",
 	"exec-if": "true"
 },
 
@@ -213,7 +213,7 @@
 "custom/update": {
 	"format": "",
 	"exec": "echo ",
-	"on-click": "/home/arkboi/.config/hypr/scripts/update.sh",
+	"on-click": "~/.config/hypr/scripts/update.sh",
 	"exec-if": "true",
     "class": "grouped"
 },
