@@ -5,9 +5,9 @@ hyprpaper
 
 # Wallpaper directory
 
-WALLPAPER=/home/arkboi/wallpapers/solace1.jpg
+WALLPAPER=~/wallpapers/painting7.jpg
 
 # Set the Be Right Back wallpaper:
 
 hyprctl hyprpaper preload "$WALLPAPER"
-hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
+hyprctl hyprpaper wallpaper ",$WALLPAPER"
