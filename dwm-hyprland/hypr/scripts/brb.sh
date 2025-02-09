@@ -10,4 +10,4 @@ WALLPAPER=~/wallpapers/brb.png
 # Set the Be Right Back wallpaper:
 
 hyprctl hyprpaper preload "$WALLPAPER"
-hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
+hyprctl hyprpaper wallpaper ",$WALLPAPER"
