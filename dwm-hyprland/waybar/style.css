@@ -58,6 +58,12 @@
     font-weight: bold;
 }
 
+#custom-media {
+	background-color: @background;
+	color: @foreground;
+	padding-left: 4px;
+	padding-right: 4px;
+}
 
 window#waybar {
     background: @foreground;
