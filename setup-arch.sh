@@ -3,7 +3,7 @@
 echo "MAKE SURE YOU ARE IN THE GITHUB REPOSITORY'S FOLDER"
 chmod +x backup.sh
 ./backup.sh
-sudo pacman -S --noconfirm gum go rofi-wayland swaync waybar kitty python-pywal zsh
+sudo pacman -S --noconfirm gum go ttf-roboto-mono rofi-wayland swaync waybar kitty python-pywal zsh
 if gum choose "Start Installation" "No" | grep -q "Start Installation"; then
   echo "Starting installation..."
   # Place your installation code here
