@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/dwm",  "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "memory", "battery","tray", "clock", "custom/power", "group/sysext"],
+    "modules-right": ["pulseaudio", "memory", "battery", "custom/media", "tray", "clock", "custom/power", "group/sysext"],
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": false,
@@ -101,6 +101,13 @@
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "~/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep spotify"
+    },
+
+  "custom/media": {
+        "format": "{}",
+        "return-type": "json",
+        "max-length": 70,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' -F"
     },
 
 "custom/power": {
