@@ -5,7 +5,7 @@ hyprpaper
 
 # Wallpaper directory
 
-WALLPAPER=/home/arkboi/wallpapers/brb.png
+WALLPAPER=~/wallpapers/brb.png
 
 # Set the Be Right Back wallpaper:
 
