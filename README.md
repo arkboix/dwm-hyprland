@@ -1,4 +1,4 @@
-# DWM Hyprland v1.1
+# DWM Hyprland v1.2
 
 Finally! The easy way to get a DWM-like setup with Hyprland!
 
