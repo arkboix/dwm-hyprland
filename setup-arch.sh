@@ -21,6 +21,7 @@ if gum choose "Start Installation" "No" | grep -q "Start Installation"; then
   chmod +x $HOME/.config/hypr/scripts/*.sh
   chmod +x $HOME/.config/waybar/*.sh
   echo COMPLETE!, REBOOT YOUR SYSTEM TO APPLY CHANGES CORRECTLY!
+  echo MAKE SURE TO EDIT ~/.config/waybar/style.css AND CHANGE /HOME/USERNAME TO YOUR ACTUAL USERNAME
 else
   echo "Installation aborted."
   exit 0
